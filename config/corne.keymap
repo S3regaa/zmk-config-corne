@@ -119,9 +119,9 @@
 
         sistem_loyer {
             bindings = <
-&trans  &trans          &trans          &trans        &trans           &trans    &kp K_MUTE        &kp C_VOLUME_UP    &kp C_VOLUME_DOWN  &trans       &trans  &trans
-&trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans    &kp K_PLAY_PAUSE  &kp K_SCROLL_UP    &kp C_PLAY         &kp C_PAUSE  &trans  &trans
-&trans  &trans          &trans          &trans        &trans           &trans    &kp K_STOP        &kp K_SCROLL_DOWN  &trans             &trans       &trans  &trans
+&trans  &trans          &trans          &trans        &trans           &trans    &kp K_MUTE        &kp C_VOLUME_UP    &kp C_VOLUME_DOWN  &trans       &trans  &kp C_POWER
+&trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans    &kp K_PLAY_PAUSE  &kp K_SCROLL_UP    &kp C_PLAY         &kp C_PAUSE  &trans  &kp C_AL_SCREENSAVER
+&trans  &trans          &trans          &trans        &trans           &trans    &kp K_STOP        &kp K_SCROLL_DOWN  &trans             &trans       &trans  &kp K_SLEEP
                                         &trans        &trans           &trans    &trans            &trans             &trans
             >;
         };
