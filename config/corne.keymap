@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -101,10 +102,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB       &kp Q  &kp W  &kp E            &kp R         &kp T                &kp Y               &kp U         &kp I             &kp O    &kp P     &kp LEFT_BRACKET
-&kp CAPSLOCK  &kp A  &kp S  &hrm D LEFT_ALT  &hrm F LCTRL  &hrm G LEFT_SHIFT    &hrm H RIGHT_SHIFT  &hrm J RCTRL  &hrm K RIGHT_ALT  &kp L    &kp SEMI  &kp SQT
-&kp GRAVE     &kp Z  &kp X  &kp C            &kp V         &kp B                &kp N               &kp M         &kp COMMA         &kp DOT  &kp FSLH  &kp RIGHT_BRACKET
-                            &kp ESCAPE       &mo 1         &kp SPACE            &kp RET             &mo 2         &kp BACKSPACE
+&kp TAB       &kp Q  &kp W  &kp E            &kp R         &kp T                &kp Y               &kp U           &kp I             &kp O    &kp P     &kp LEFT_BRACKET
+&kp CAPSLOCK  &kp A  &kp S  &hrm D LEFT_ALT  &hrm F LCTRL  &hrm G LEFT_SHIFT    &hrm H RIGHT_SHIFT  &hrm J RCTRL    &hrm K RIGHT_ALT  &kp L    &kp SEMI  &kp SQT
+&kp GRAVE     &kp Z  &kp X  &kp C            &kp V         &kp B                &kp N               &kp M           &kp COMMA         &kp DOT  &kp FSLH  &kp RIGHT_BRACKET
+                            &kp ESCAPE       &lt 1 KP_DOT  &kp SPACE            &kp RET             &lt 2 KP_COMMA  &kp BACKSPACE
             >;
         };
 
@@ -119,10 +120,10 @@
 
         sistem_loyer {
             bindings = <
-&trans  &trans          &trans          &trans        &trans           &trans    &kp K_MUTE        &kp C_VOLUME_UP    &kp C_VOLUME_DOWN  &trans       &trans  &kp C_POWER
-&trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans    &kp K_PLAY_PAUSE  &kp K_SCROLL_UP    &kp C_PLAY         &kp C_PAUSE  &trans  &kp C_AL_SCREENSAVER
-&trans  &trans          &trans          &trans        &trans           &trans    &kp K_STOP        &kp K_SCROLL_DOWN  &trans             &trans       &trans  &kp K_SLEEP
-                                        &trans        &trans           &trans    &trans            &trans             &trans
+&trans       &trans  &trans          &kp UP_ARROW    &trans           &trans    &kp K_MUTE        &kp C_VOLUME_UP    &kp C_VOLUME_DOWN  &trans       &bt BT_CLR  &trans
+&trans       &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans    &kp K_PLAY_PAUSE  &kp K_SCROLL_UP    &kp C_PLAY         &kp C_PAUSE  &bt BT_PRV  &bt BT_NXT
+&key_repeat  &trans  &trans          &trans          &trans           &trans    &kp K_STOP        &kp K_SCROLL_DOWN  &trans             &trans       &trans      &trans
+                                     &trans          &trans           &trans    &trans            &trans             &trans
             >;
         };
     };
